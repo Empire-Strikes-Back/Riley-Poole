@@ -1,0 +1,21 @@
+<video controls src="rtsp://host:554/65">
+  <!-- Fallback here -->
+ </video>
+ <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+
+
+ <video id="video" controls></video>
+ <script>
+   if (Hls.isSupported()) {
+     var video = document.getElementById('video');
+     var hls = new Hls();
+     hls.loadSource('http://127.0.0.1:3050/hls/http.m3u8');
+     hls.attachMedia(video);
+     hls.on(Hls.Events.MANIFEST_PARSED, function () {
+       console.warn('Hls.Events.MANIFEST_PARSED')
+       video.play();
+     });
+   }
+
+ </script>
