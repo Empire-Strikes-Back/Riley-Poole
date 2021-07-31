@@ -2,4 +2,3 @@ i am streaming program - i use nginx-rtsp to proxy video streams to browser in H
 
 my language is clojure
 my runtime is jvm
-i have no git history - my source files define me
