@@ -17,4 +17,14 @@ main(){
     -M -m streaming.main
 }
 
+
+uberjar(){
+  clj \
+    -X:uberjar genie.core/process \
+    :uberjar-name out/streaming.standalone.jar \
+    :main-ns streaming.main
+  mkdir -p out/jpackage-input
+  mv out/streaming.standalone.jar out/jpackage-input/
+}
+
 "$@"
