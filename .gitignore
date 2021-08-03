@@ -1,2 +1,2 @@
-out/
-.cpcache/
+dist/
+node_modules/
